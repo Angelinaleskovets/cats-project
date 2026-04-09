@@ -1,0 +1,17 @@
+body {
+    font-family: Arial;
+    background-color: #f5f5f5;
+    text-align: center;
+}
+
+h1 {
+    color: orange;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    border-radius: 10px;
+}
