@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<title>Список завдань</title>
+
+<style>
+body {
+    font-family: Arial;
+    background: #eee;
+}
+
+.container {
+    width: 300px;
+    margin: 50px auto;
+    background: white;
+    padding: 20px;
+}
+
+button {
+    width: 100%;
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+<h2>Список завдань</h2>
+
+<input id="task">
+<button onclick="addTask()">Додати</button>
+
+<ul id="list"></ul>
+</div>
+
+<script>
+function addTask() {
+    let li = document.createElement("li");
+    li.innerText = document.getElementById("task").value;
+    document.getElementById("list").appendChild(li);
+}
+</script>
+
+</body>
+</html>
