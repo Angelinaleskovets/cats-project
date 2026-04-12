@@ -1,69 +1,46 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-    <meta charset="UTF-8">
-    <title>Список завдань</title>
+<meta charset="UTF-8">
+<title>Список завдань</title>
 
-    <style>
-        body {
-            font-family: Arial;
-            background: #f2f2f2;
-            text-align: center;
-        }
+<style>
+body {
+    font-family: Arial;
+    background: #f0f0f0;
+}
 
-        h1 {
-            color: #333;
-        }
+.container {
+    width: 350px;
+    margin: 50px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+}
 
-        input {
-            padding: 10px;
-            width: 200px;
-        }
+h2 {
+    color: green;
+}
 
-        button {
-            padding: 10px;
-            cursor: pointer;
-            background: orange;
-            border: none;
-            color: white;
-        }
+li {
+    margin: 8px 0;
+}
+</style>
 
-        li {
-            list-style: none;
-            background: white;
-            margin: 10px auto;
-            padding: 10px;
-            width: 250px;
-            border-radius: 5px;
-        }
-    </style>
 </head>
 <body>
-    <h1>📝 Список завдань</h1>
 
-    <input type="text" id="taskInput" placeholder="Введи завдання">
-    <button onclick="addTask()">Додати</button>
+<div class="container">
+<h2>Список завдань</h2>
 
-    <ul id="taskList"></ul>
+<ul>
+    <li>Опрацювати HTML та CSS</li>
+    <li>Опрацювати Git та GitHub</li>
+    <li>Опрацювати JavaScript</li>
+    <li>Опрацювати Node.js</li>
+</ul>
 
-    <script>
-        function addTask() {
-            let input = document.getElementById("taskInput");
-
-            if (input.value === "") return;
-
-            let li = document.createElement("li");
-            li.textContent = input.value;
-
-            // видалення по кліку
-            li.onclick = function () {
-                li.remove();
-            };
-
-            document.getElementById("taskList").appendChild(li);
-            input.value = "";
-        }
-    </script>
+</div>
 
 </body>
 </html>
